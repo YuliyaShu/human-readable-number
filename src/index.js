@@ -20,7 +20,7 @@ module.exports = function toReadable (number) {
         let units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
         let dozensForReturn = dozens[Number(String(number).slice(0, 1)) - 2];
         let unitsForReturn = units[Number(String(number).slice(-1))];
-        return `${dozensForReturn} ${unitsForReturn}`;
+        return `${dozensForReturn} ${unitsForReturn}`.trim();
     }
     else
     // For 100-109, 200-209, ..., 900-999
@@ -29,7 +29,7 @@ module.exports = function toReadable (number) {
         let unitsForHundredForReturn = unitsForHundred[Number(String(number).slice(0, 1)) - 1];
         let units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
         let unitsForReturn = units[Number(String(number).slice(-1))];
-        return `${unitsForHundredForReturn} hundred ${unitsForReturn}`;
+        return `${unitsForHundredForReturn} hundred ${unitsForReturn}`.trim();
     }
     else
     // For 110-119, 210-219, ..., 910-919
@@ -49,7 +49,7 @@ module.exports = function toReadable (number) {
         let units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
         let dozensForReturn = dozens[Number(String(number).slice(1, 2))-2];
         let unitsForReturn = units[Number(String(number).slice(-1))];
-        return `${unitsForHundredForReturn} hundred ${dozensForReturn} ${unitsForReturn}`;
+        return `${unitsForHundredForReturn} hundred ${dozensForReturn} ${unitsForReturn}`.trim();
     }
     
 
