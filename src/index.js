@@ -61,5 +61,3 @@ module.exports = function toReadable (number) {
 
     return 'Incorrect Data';
 };
-
-alert (toReadable(999));
